@@ -1,0 +1,72 @@
+# Base configuration (= the "full" profile). Profiles in configs/profiles/ override it.
+# All values are fixed BEFORE the final test evaluation; see WORK_LOG.md for changes.
+experiment: synthetic_gaussian_blur_mismatch
+master_seed: 20261117
+image_size: 128
+device: auto          # auto = CUDA -> MPS -> CPU, each checked with an FFT/conv round trip
+num_threads: 4
+
+data:
+  source: synthetic
+  n_train: 400        # denoiser training only
+  n_val: 24           # hyper-parameter selection + failure threshold
+  n_test: 48          # final evaluation only
+  n_denoiser_heldout: 12   # first 12 validation phantoms: denoiser monitoring
+
+operator:
+  boundary: circular
+  sigma_true: 1.5     # pixels
+  truncate: 4.0       # kernel radius = ceil(truncate * sigma)
+  ratios: [0.5, 0.75, 1.0, 1.25, 1.5]   # sigma_assumed / sigma_true
+
+noise:
+  std: 0.02
+  test_seeds: [0, 1, 2]
+  val_seeds: [0]
+
+methods: [tikhonov, pnp_admm]
+
+tikhonov:
+  clip_output: true
+  lambda_grid: {logspace: [-4, 0, 33]}
+
+pnp:
+  denoiser: small_cnn
+  rho_grid: [0.05, 0.1, 0.2, 0.5, 1.0]
+  sigma_d_grid: [0.01, 0.02, 0.03, 0.05, 0.08]
+  iters_grid: [5, 10, 20, 30, 40]
+  clip_output: true
+  divergence_bound: 1000.0
+  batch_size: 72
+  denoiser_chunk: 24
+
+denoiser:
+  arch: {depth: 8, width: 32}
+  train:
+    iterations: 4000
+    batch_size: 16
+    crop: 64
+    lr: 1.0e-3
+    lr_min: 1.0e-5
+    sigma_range: [0.0, 0.1]
+    eval_every: 250
+    eval_sigmas: [0.01, 0.02, 0.05, 0.1]
+    seed: 7
+
+scores:
+  residual_eps: 1.0e-12
+  acf_max_lag: 3
+  sensitivity_delta: 0.05   # relative: sigma_assumed * (1 +/- delta)
+
+failure:
+  # failure <=> PSNR < median(validation matched-operator PSNR of the same method) - margin_db
+  margin_db: 3.0
+  # auxiliary label: worst fraction by MSE within each (method, ratio, noise seed)
+  relative_worst_fraction: 0.2
+
+review_fractions: [0.1, 0.2, 0.3, 0.5, 1.0]
+
+bootstrap:
+  n_resamples: 2000
+  seed: 12345
+  ci: 0.95

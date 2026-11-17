@@ -1,0 +1,4 @@
+# Quick profile: 12 test phantoms x 2 noise seeds; same trained denoiser as full.
+data: {n_val: 12, n_test: 12}
+noise: {test_seeds: [0, 1]}
+bootstrap: {n_resamples: 1000}
