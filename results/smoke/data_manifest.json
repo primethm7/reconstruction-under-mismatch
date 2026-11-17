@@ -1,0 +1,26 @@
+{
+  "key": "synth-5f3fbdb41bec",
+  "spec": {
+    "generator": "synthetic_v1",
+    "seed": 20261117,
+    "size": 128,
+    "n_train": 32,
+    "n_val": 4,
+    "n_test": 4
+  },
+  "splits": {
+    "train": {
+      "n": 32,
+      "sha256": "b35fa92643b437df970591704d855790b3b2e72e5ebfd94fdffd5923b2b0904f"
+    },
+    "val": {
+      "n": 4,
+      "sha256": "6bf332c48b9446a7aec0255d87fc81d787249d18a49c23d154f03809e1372c18"
+    },
+    "test": {
+      "n": 4,
+      "sha256": "f4b13d810811db4f85566e7375cfab4b78a90a3af50139812265952916791267"
+    }
+  },
+  "directory": "artifacts/data/synth-5f3fbdb41bec"
+}

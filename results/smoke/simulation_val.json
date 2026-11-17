@@ -1,0 +1,25 @@
+{
+  "split": "val",
+  "sigma_true": 1.5,
+  "noise_std": 0.02,
+  "noise_seeds": [
+    0
+  ],
+  "truncate": 4.0,
+  "boundary": "circular",
+  "y_clipped": false,
+  "n_images": 4,
+  "y_sha256": "71bbe4026edb2dadf9ae3e1c93aa13e3cb8488dc5351d4e83f9f730dc48d72f0",
+  "spec": {
+    "data": "6bf332c48b9446a7aec0255d87fc81d787249d18a49c23d154f03809e1372c18",
+    "sigma_true": 1.5,
+    "truncate": 4.0,
+    "noise": 0.02,
+    "seeds": [
+      0
+    ],
+    "master_seed": 20261117,
+    "code": "bc790e6b18bdb244faff9fbe6579624bf9aac0f5f92e7b8f6d6dfe822885226b"
+  },
+  "directory": "artifacts/runs/smoke/obs_val_2493476b8313"
+}

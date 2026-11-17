@@ -1,0 +1,36 @@
+{
+  "arch": {
+    "arch": "SmallResidualDenoiser",
+    "depth": 8,
+    "width": 32
+  },
+  "n_parameters": 56385,
+  "train_cfg": {
+    "iterations": 40,
+    "batch_size": 16,
+    "crop": 64,
+    "lr": 0.001,
+    "lr_min": 1e-05,
+    "sigma_range": [
+      0.0,
+      0.1
+    ],
+    "eval_every": 20,
+    "eval_sigmas": [
+      0.01,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "seed": 7
+  },
+  "n_train_images": 32,
+  "n_heldout_images": 4,
+  "train_seconds": 36.120077200001106,
+  "device": "cpu",
+  "checkpoint_sha256": "1b619ada577b170f900b3ccef3fc1199782a1c62f2f7e181e4eace4edde7ba9a",
+  "improves_on_input_at_all_sigmas": false,
+  "key": "den-3d86868e1422",
+  "checkpoint": "artifacts/checkpoints/den-3d86868e1422/model.pt",
+  "trained_on": "synth-5f3fbdb41bec"
+}

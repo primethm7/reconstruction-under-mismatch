@@ -1,0 +1,122 @@
+09:40:17 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+09:40:19 [data] synth-5f3fbdb41bec: train=32, val=4, test=4
+09:40:19 [denoiser] training den-5f0b276f8668 on 32 synthetic train phantoms (cpu)
+09:40:24 [denoiser] random-init held-out: [{'sigma': 0.01, 'psnr_noisy': 40.03452685301162, 'psnr_denoised': 23.336964650624548, 'gain_db': -16.697562202387072}, {'sigma': 0.02, 'psnr_noisy': 33.94856575471684, 'psnr_denoised': 23.045860660573705, 'gain_db': -10.902705094143133}, {'sigma': 0.05, 'psnr_noisy': 26.012846295896768, 'psnr_denoised': 21.520807239323858, 'gain_db': -4.49203905657291}, {'sigma': 0.1, 'psnr_noisy': 20.024320720930277, 'psnr_denoised': 18.413753049045905, 'gain_db': -1.6105676718843718}]
+09:40:39 [denoiser] it 20/40 loss 3.82e-03 lr 5.2e-04 held-out gains s=0.01:-0.91dB, s=0.02:-0.23dB, s=0.05:-0.04dB, s=0.10:-0.01dB (15s)
+09:40:55 [denoiser] it 40/40 loss 3.27e-03 lr 1.0e-05 held-out gains s=0.01:-0.01dB, s=0.02:-0.00dB, s=0.05:-0.00dB, s=0.10:+0.00dB (31s)
+09:40:55 [denoiser] WARNING: trained denoiser does not improve on the noisy input at every sigma
+09:40:55 [train-denoiser] done
+09:44:28 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+09:44:28 [data] synth-5f3fbdb41bec: train=32, val=4, test=4
+09:44:28 [denoiser] training den-3d86868e1422 on 32 synthetic train phantoms (cpu)
+09:44:36 [denoiser] random-init held-out: [{'sigma': 0.01, 'psnr_noisy': 40.03452685301162, 'psnr_denoised': 23.336964650624548, 'gain_db': -16.697562202387072}, {'sigma': 0.02, 'psnr_noisy': 33.94856575471684, 'psnr_denoised': 23.045860660573705, 'gain_db': -10.902705094143133}, {'sigma': 0.05, 'psnr_noisy': 26.012846295896768, 'psnr_denoised': 21.520807239323858, 'gain_db': -4.49203905657291}, {'sigma': 0.1, 'psnr_noisy': 20.024320720930277, 'psnr_denoised': 18.413753049045905, 'gain_db': -1.6105676718843718}]
+09:44:53 [denoiser] it 20/40 loss 3.82e-03 lr 5.2e-04 held-out gains s=0.01:-0.91dB, s=0.02:-0.23dB, s=0.05:-0.04dB, s=0.10:-0.01dB (17s)
+09:45:12 [denoiser] it 40/40 loss 3.27e-03 lr 1.0e-05 held-out gains s=0.01:-0.01dB, s=0.02:-0.00dB, s=0.05:-0.00dB, s=0.10:+0.00dB (36s)
+09:45:12 [denoiser] WARNING: trained denoiser does not improve on the noisy input at every sigma
+09:45:12 [observations] val: 4 observations (4 images x 1 noise seeds)
+09:45:12 [tune] Tikhonov lambda=0.0316 val PSNR=28.18
+09:45:13 [tune] PnP rho=0.2 sigma_d=0.02: PSNR@K 3:27.65 6:27.19 (1s)
+09:45:14 [tune] PnP rho=0.2 sigma_d=0.05: PSNR@K 3:27.65 6:27.19 (2s)
+09:45:16 [tune] PnP rho=1.0 sigma_d=0.02: PSNR@K 3:27.58 6:27.71 (4s)
+09:45:17 [tune] PnP rho=1.0 sigma_d=0.05: PSNR@K 3:27.58 6:27.71 (5s)
+09:45:17 [tune] PnP selected rho=1.0 sigma_d=0.05 K=6 val PSNR=27.71
+09:45:18 [tune] failure threshold tikhonov: PSNR < 25.41 dB
+09:45:18 [tune] failure threshold pnp_admm: PSNR < 24.98 dB
+09:45:18 [observations] test: 4 observations (4 images x 1 noise seeds)
+09:45:18 [run] tikhonov sigma_assumed=0.7500: 4 obs in 0.1s, diverged=0
+09:45:18 [run] tikhonov sigma_assumed=1.1250: 4 obs in 0.1s, diverged=0
+09:45:19 [run] tikhonov sigma_assumed=1.5000: 4 obs in 0.1s, diverged=0
+09:45:19 [run] tikhonov sigma_assumed=1.8750: 4 obs in 0.1s, diverged=0
+09:45:19 [run] tikhonov sigma_assumed=2.2500: 4 obs in 0.1s, diverged=0
+09:45:22 [run] pnp_admm sigma_assumed=0.7500: 4 obs in 3.5s, diverged=0
+09:45:26 [run] pnp_admm sigma_assumed=1.1250: 4 obs in 3.8s, diverged=0
+09:45:29 [run] pnp_admm sigma_assumed=1.5000: 4 obs in 3.2s, diverged=0
+09:45:33 [run] pnp_admm sigma_assumed=1.8750: 4 obs in 3.5s, diverged=0
+09:45:36 [run] pnp_admm sigma_assumed=2.2500: 4 obs in 3.7s, diverged=0
+09:45:37 [evaluate] wrote per_image.csv (40 rows); absolute failures per method: pnp_admm=0, tikhonov=4
+09:45:53 [summarize] wrote summary tables to <repo>\results\smoke
+09:46:06 [plot] 6 figures -> <repo>\results\smoke\figures
+09:46:06 [reproduce] done
+09:46:56 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+09:47:30 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+09:47:43 [plot] 6 figures -> <repo>\results\smoke\figures
+09:47:43 [plot] done
+11:51:26 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:51:26 [data] synth-5f3fbdb41bec: train=32, val=4, test=4
+11:51:26 [denoiser] reusing cached checkpoint den-3d86868e1422
+11:51:26 [denoiser] WARNING: trained denoiser does not improve on the noisy input at every sigma
+11:51:26 [tune] Tikhonov lambda=0.0316 val PSNR=28.18
+11:51:28 [tune] PnP rho=0.2 sigma_d=0.02: PSNR@K 3:27.65 6:27.19 (1s)
+11:51:29 [tune] PnP rho=0.2 sigma_d=0.05: PSNR@K 3:27.65 6:27.19 (3s)
+11:51:30 [tune] PnP rho=1.0 sigma_d=0.02: PSNR@K 3:27.58 6:27.71 (4s)
+11:51:32 [tune] PnP rho=1.0 sigma_d=0.05: PSNR@K 3:27.58 6:27.71 (5s)
+11:51:32 [tune] PnP selected rho=1.0 sigma_d=0.05 K=6 val PSNR=27.71
+11:51:33 [tune] failure threshold tikhonov: PSNR < 25.41 dB
+11:51:33 [tune] failure threshold pnp_admm: PSNR < 24.98 dB
+11:51:34 [run] tikhonov sigma_assumed=0.7500: 4 obs in 0.1s, diverged=0
+11:51:34 [run] tikhonov sigma_assumed=1.1250: 4 obs in 0.1s, diverged=0
+11:51:34 [run] tikhonov sigma_assumed=1.5000: 4 obs in 0.1s, diverged=0
+11:51:34 [run] tikhonov sigma_assumed=1.8750: 4 obs in 0.1s, diverged=0
+11:51:34 [run] tikhonov sigma_assumed=2.2500: 4 obs in 0.1s, diverged=0
+11:51:39 [run] pnp_admm sigma_assumed=0.7500: 4 obs in 4.9s, diverged=0
+11:51:44 [run] pnp_admm sigma_assumed=1.1250: 4 obs in 4.3s, diverged=0
+11:51:48 [run] pnp_admm sigma_assumed=1.5000: 4 obs in 4.6s, diverged=0
+11:51:52 [run] pnp_admm sigma_assumed=1.8750: 4 obs in 4.2s, diverged=0
+11:51:57 [run] pnp_admm sigma_assumed=2.2500: 4 obs in 4.6s, diverged=0
+11:51:58 [evaluate] wrote per_image.csv (40 rows); absolute failures per method: pnp_admm=0, tikhonov=4
+11:52:13 [summarize] wrote summary tables to <repo>\results\smoke
+11:52:27 [plot] 6 figures -> <repo>\results\smoke\figures
+11:52:27 [reproduce] done
+11:52:27 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:52:27 [data] synth-5f3fbdb41bec: train=32, val=4, test=4
+11:52:27 [denoiser] reusing cached checkpoint den-3d86868e1422
+11:52:27 [denoiser] WARNING: trained denoiser does not improve on the noisy input at every sigma
+11:52:28 [tune] reusing selection c0eb546568f6
+11:52:28 [run] reuse tikhonov__sa0.7500.npz
+11:52:28 [run] reuse tikhonov__sa1.1250.npz
+11:52:28 [run] reuse tikhonov__sa1.5000.npz
+11:52:28 [run] reuse tikhonov__sa1.8750.npz
+11:52:28 [run] reuse tikhonov__sa2.2500.npz
+11:52:28 [run] reuse pnp_admm__sa0.7500.npz
+11:52:28 [run] reuse pnp_admm__sa1.1250.npz
+11:52:28 [run] reuse pnp_admm__sa1.5000.npz
+11:52:28 [run] reuse pnp_admm__sa1.8750.npz
+11:52:28 [run] reuse pnp_admm__sa2.2500.npz
+11:52:28 [evaluate] wrote per_image.csv (40 rows); absolute failures per method: pnp_admm=0, tikhonov=4
+11:52:28 [evaluate] done
+12:25:37 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:25:37 [data] synth-5f3fbdb41bec: train=32, val=4, test=4
+12:25:37 [denoiser] reusing cached checkpoint den-3d86868e1422
+12:25:37 [denoiser] WARNING: trained denoiser does not improve on the noisy input at every sigma
+12:25:37 [tune] reusing selection c0eb546568f6
+12:25:37 [run] reuse tikhonov__sa0.7500.npz
+12:25:37 [run] reuse tikhonov__sa1.1250.npz
+12:25:37 [run] reuse tikhonov__sa1.5000.npz
+12:25:37 [run] reuse tikhonov__sa1.8750.npz
+12:25:37 [run] reuse tikhonov__sa2.2500.npz
+12:25:37 [run] reuse pnp_admm__sa0.7500.npz
+12:25:37 [run] reuse pnp_admm__sa1.1250.npz
+12:25:37 [run] reuse pnp_admm__sa1.5000.npz
+12:25:37 [run] reuse pnp_admm__sa1.8750.npz
+12:25:37 [run] reuse pnp_admm__sa2.2500.npz
+12:25:37 [evaluate] wrote per_image.csv (40 rows); absolute failures per method: pnp_admm=0, tikhonov=4
+12:25:45 [summarize] wrote summary tables to <repo>\results\smoke
+12:25:53 [plot] 6 figures -> <repo>\results\smoke\figures
+12:25:53 [reproduce] done
+12:25:53 profile=smoke tag=smoke device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:25:53 [data] synth-5f3fbdb41bec: train=32, val=4, test=4
+12:25:54 [denoiser] reusing cached checkpoint den-3d86868e1422
+12:25:54 [denoiser] WARNING: trained denoiser does not improve on the noisy input at every sigma
+12:25:54 [tune] reusing selection c0eb546568f6
+12:25:54 [run] reuse tikhonov__sa0.7500.npz
+12:25:54 [run] reuse tikhonov__sa1.1250.npz
+12:25:54 [run] reuse tikhonov__sa1.5000.npz
+12:25:54 [run] reuse tikhonov__sa1.8750.npz
+12:25:54 [run] reuse tikhonov__sa2.2500.npz
+12:25:54 [run] reuse pnp_admm__sa0.7500.npz
+12:25:54 [run] reuse pnp_admm__sa1.1250.npz
+12:25:54 [run] reuse pnp_admm__sa1.5000.npz
+12:25:54 [run] reuse pnp_admm__sa1.8750.npz
+12:25:54 [run] reuse pnp_admm__sa2.2500.npz
+12:25:54 [evaluate] wrote per_image.csv (40 rows); absolute failures per method: pnp_admm=0, tikhonov=4
+12:25:54 [evaluate] done

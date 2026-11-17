@@ -1,0 +1,102 @@
+experiment: synthetic_gaussian_blur_mismatch
+master_seed: 20261117
+image_size: 128
+device: auto
+num_threads: 4
+data:
+  source: synthetic
+  n_train: 32
+  n_val: 4
+  n_test: 4
+  n_denoiser_heldout: 4
+operator:
+  boundary: circular
+  sigma_true: 1.5
+  truncate: 4.0
+  ratios:
+  - 0.5
+  - 0.75
+  - 1.0
+  - 1.25
+  - 1.5
+  sigma_assumed:
+  - 0.75
+  - 1.125
+  - 1.5
+  - 1.875
+  - 2.25
+noise:
+  std: 0.02
+  test_seeds:
+  - 0
+  val_seeds:
+  - 0
+methods:
+- tikhonov
+- pnp_admm
+tikhonov:
+  clip_output: true
+  lambda_grid:
+  - 0.0001
+  - 0.000316228
+  - 0.001
+  - 0.00316228
+  - 0.01
+  - 0.0316228
+  - 0.1
+  - 0.316228
+  - 1.0
+pnp:
+  denoiser: small_cnn
+  rho_grid:
+  - 0.2
+  - 1.0
+  sigma_d_grid:
+  - 0.02
+  - 0.05
+  iters_grid:
+  - 3
+  - 6
+  clip_output: true
+  divergence_bound: 1000.0
+  batch_size: 72
+  denoiser_chunk: 24
+denoiser:
+  arch:
+    depth: 8
+    width: 32
+  train:
+    iterations: 40
+    batch_size: 16
+    crop: 64
+    lr: 0.001
+    lr_min: 1.0e-05
+    sigma_range:
+    - 0.0
+    - 0.1
+    eval_every: 20
+    eval_sigmas:
+    - 0.01
+    - 0.02
+    - 0.05
+    - 0.1
+    seed: 7
+scores:
+  residual_eps: 1.0e-12
+  acf_max_lag: 3
+  sensitivity_delta: 0.05
+failure:
+  margin_db: 3.0
+  relative_worst_fraction: 0.2
+review_fractions:
+- 0.1
+- 0.2
+- 0.3
+- 0.5
+- 1.0
+bootstrap:
+  n_resamples: 200
+  seed: 12345
+  ci: 0.95
+profile: smoke
+extra_config: []
