@@ -1,0 +1,108 @@
+10:18:57 profile=quick tag=quick device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+10:19:12 [data] synth-7d41daefee0a: train=400, val=12, test=12
+10:19:13 [denoiser] reusing cached checkpoint den-2df14010572a
+10:19:13 [observations] val: 12 observations (12 images x 1 noise seeds)
+10:19:13 [tune] Tikhonov lambda=0.0316 val PSNR=27.99
+10:19:24 [tune] PnP rho=0.05 sigma_d=0.01: PSNR@K 5:26.55 10:24.52 20:21.86 30:20.03 40:18.59 (11s)
+10:19:36 [tune] PnP rho=0.05 sigma_d=0.02: PSNR@K 5:28.91 10:28.01 20:26.73 30:25.79 40:25.01 (23s)
+10:19:48 [tune] PnP rho=0.05 sigma_d=0.03: PSNR@K 5:30.42 10:30.40 20:30.25 30:30.11 40:29.98 (35s)
+10:19:59 [tune] PnP rho=0.05 sigma_d=0.05: PSNR@K 5:31.51 10:31.96 20:32.23 30:32.29 40:32.28 (46s)
+10:20:11 [tune] PnP rho=0.05 sigma_d=0.08: PSNR@K 5:31.52 10:31.98 20:32.18 30:32.21 40:32.21 (58s)
+10:20:23 [tune] PnP rho=0.1 sigma_d=0.01: PSNR@K 5:28.71 10:27.83 20:26.15 30:24.75 40:23.52 (70s)
+10:20:34 [tune] PnP rho=0.1 sigma_d=0.02: PSNR@K 5:30.47 10:30.77 20:30.79 30:30.68 40:30.54 (81s)
+10:20:45 [tune] PnP rho=0.1 sigma_d=0.03: PSNR@K 5:31.03 10:31.64 20:32.07 30:32.19 40:32.20 (92s)
+10:20:57 [tune] PnP rho=0.1 sigma_d=0.05: PSNR@K 5:31.07 10:31.76 20:32.24 30:32.41 40:32.47 (104s)
+10:21:09 [tune] PnP rho=0.1 sigma_d=0.08: PSNR@K 5:30.10 10:30.70 20:31.01 30:31.09 40:31.14 (116s)
+10:21:22 [tune] PnP rho=0.2 sigma_d=0.01: PSNR@K 5:29.65 10:29.91 20:29.70 30:29.25 40:28.76 (129s)
+10:21:33 [tune] PnP rho=0.2 sigma_d=0.02: PSNR@K 5:30.36 10:31.06 20:31.54 30:31.69 40:31.70 (140s)
+10:21:44 [tune] PnP rho=0.2 sigma_d=0.03: PSNR@K 5:30.41 10:31.15 20:31.79 30:32.03 40:32.10 (151s)
+10:21:56 [tune] PnP rho=0.2 sigma_d=0.05: PSNR@K 5:29.69 10:30.27 20:30.78 30:30.98 40:31.05 (163s)
+10:22:07 [tune] PnP rho=0.2 sigma_d=0.08: PSNR@K 5:28.73 10:28.98 20:29.16 30:29.24 40:29.27 (174s)
+10:22:18 [tune] PnP rho=0.5 sigma_d=0.01: PSNR@K 5:29.36 10:29.97 20:30.46 30:30.57 40:30.51 (185s)
+10:22:29 [tune] PnP rho=0.5 sigma_d=0.02: PSNR@K 5:29.41 10:30.01 20:30.50 30:30.74 40:30.84 (196s)
+10:22:41 [tune] PnP rho=0.5 sigma_d=0.03: PSNR@K 5:29.04 10:29.47 20:29.85 30:30.10 40:30.24 (208s)
+10:22:52 [tune] PnP rho=0.5 sigma_d=0.05: PSNR@K 5:28.32 10:28.54 20:28.69 30:28.77 40:28.82 (219s)
+10:23:03 [tune] PnP rho=0.5 sigma_d=0.08: PSNR@K 5:27.53 10:27.65 20:27.72 30:27.73 40:27.73 (230s)
+10:23:14 [tune] PnP rho=1.0 sigma_d=0.01: PSNR@K 5:28.84 10:29.37 20:29.84 30:30.01 40:30.03 (241s)
+10:23:26 [tune] PnP rho=1.0 sigma_d=0.02: PSNR@K 5:28.65 10:29.05 20:29.28 30:29.38 40:29.45 (253s)
+10:23:40 [tune] PnP rho=1.0 sigma_d=0.03: PSNR@K 5:28.17 10:28.38 20:28.45 30:28.51 40:28.58 (267s)
+10:23:52 [tune] PnP rho=1.0 sigma_d=0.05: PSNR@K 5:27.51 10:27.59 20:27.61 30:27.62 40:27.61 (279s)
+10:24:04 [tune] PnP rho=1.0 sigma_d=0.08: PSNR@K 5:26.61 10:26.59 20:26.56 30:26.54 40:26.52 (291s)
+10:24:04 [tune] PnP selected rho=0.1 sigma_d=0.05 K=40 val PSNR=32.47
+10:24:16 [tune] failure threshold tikhonov: PSNR < 25.18 dB
+10:24:16 [tune] failure threshold pnp_admm: PSNR < 29.70 dB
+10:24:16 [observations] test: 24 observations (12 images x 2 noise seeds)
+10:24:16 [run] tikhonov sigma_assumed=0.7500: 24 obs in 0.4s, diverged=0
+10:24:17 [run] tikhonov sigma_assumed=1.1250: 24 obs in 0.4s, diverged=0
+10:24:17 [run] tikhonov sigma_assumed=1.5000: 24 obs in 0.4s, diverged=0
+10:24:17 [run] tikhonov sigma_assumed=1.8750: 24 obs in 0.3s, diverged=0
+10:24:18 [run] tikhonov sigma_assumed=2.2500: 24 obs in 0.4s, diverged=0
+10:25:32 [run] pnp_admm sigma_assumed=0.7500: 24 obs in 74.1s, diverged=0
+10:26:59 [run] pnp_admm sigma_assumed=1.1250: 24 obs in 87.6s, diverged=0
+10:28:19 [run] pnp_admm sigma_assumed=1.5000: 24 obs in 79.8s, diverged=0
+10:29:42 [run] pnp_admm sigma_assumed=1.8750: 24 obs in 82.8s, diverged=0
+10:31:04 [run] pnp_admm sigma_assumed=2.2500: 24 obs in 81.8s, diverged=0
+10:31:05 [evaluate] wrote per_image.csv (240 rows); absolute failures per method: pnp_admm=66, tikhonov=26
+10:32:14 [summarize] wrote summary tables to <repo>\results\quick
+10:32:21 [plot] 6 figures -> <repo>\results\quick\figures
+10:32:21 [reproduce] done
+11:28:04 profile=quick tag=quick device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:28:20 [plot] 6 figures -> <repo>\results\quick\figures
+11:28:20 [plot] done
+11:29:32 profile=quick tag=quick device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:29:48 [plot] 6 figures -> <repo>\results\quick\figures
+11:29:48 [plot] done
+11:37:23 profile=quick tag=quick device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:39:39 [summarize] wrote summary tables to <repo>\results\quick
+11:39:39 [summarize] done
+12:10:38 profile=quick tag=quick device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:10:38 [data] synth-7d41daefee0a: train=400, val=12, test=12
+12:10:39 [denoiser] reusing cached checkpoint den-2df14010572a
+12:10:39 [tune] Tikhonov lambda=0.0316 val PSNR=27.99
+12:10:53 [tune] PnP rho=0.05 sigma_d=0.01: PSNR@K 5:26.55 10:24.52 20:21.86 30:20.03 40:18.59 (14s)
+12:11:05 [tune] PnP rho=0.05 sigma_d=0.02: PSNR@K 5:28.91 10:28.01 20:26.73 30:25.79 40:25.01 (26s)
+12:11:21 [tune] PnP rho=0.05 sigma_d=0.03: PSNR@K 5:30.42 10:30.40 20:30.25 30:30.11 40:29.98 (41s)
+12:11:34 [tune] PnP rho=0.05 sigma_d=0.05: PSNR@K 5:31.51 10:31.96 20:32.23 30:32.29 40:32.28 (55s)
+12:11:46 [tune] PnP rho=0.05 sigma_d=0.08: PSNR@K 5:31.52 10:31.98 20:32.18 30:32.21 40:32.21 (67s)
+12:11:59 [tune] PnP rho=0.1 sigma_d=0.01: PSNR@K 5:28.71 10:27.83 20:26.15 30:24.75 40:23.52 (80s)
+12:12:10 [tune] PnP rho=0.1 sigma_d=0.02: PSNR@K 5:30.47 10:30.77 20:30.79 30:30.68 40:30.54 (91s)
+12:12:22 [tune] PnP rho=0.1 sigma_d=0.03: PSNR@K 5:31.03 10:31.64 20:32.07 30:32.19 40:32.20 (103s)
+12:12:35 [tune] PnP rho=0.1 sigma_d=0.05: PSNR@K 5:31.07 10:31.76 20:32.24 30:32.41 40:32.47 (115s)
+12:12:47 [tune] PnP rho=0.1 sigma_d=0.08: PSNR@K 5:30.10 10:30.70 20:31.01 30:31.09 40:31.14 (127s)
+12:12:58 [tune] PnP rho=0.2 sigma_d=0.01: PSNR@K 5:29.65 10:29.91 20:29.70 30:29.25 40:28.76 (139s)
+12:13:09 [tune] PnP rho=0.2 sigma_d=0.02: PSNR@K 5:30.36 10:31.06 20:31.54 30:31.69 40:31.70 (150s)
+12:13:21 [tune] PnP rho=0.2 sigma_d=0.03: PSNR@K 5:30.41 10:31.15 20:31.79 30:32.03 40:32.10 (162s)
+12:13:34 [tune] PnP rho=0.2 sigma_d=0.05: PSNR@K 5:29.69 10:30.27 20:30.78 30:30.98 40:31.05 (175s)
+12:13:46 [tune] PnP rho=0.2 sigma_d=0.08: PSNR@K 5:28.73 10:28.98 20:29.16 30:29.24 40:29.27 (187s)
+12:13:58 [tune] PnP rho=0.5 sigma_d=0.01: PSNR@K 5:29.36 10:29.97 20:30.46 30:30.57 40:30.51 (199s)
+12:14:10 [tune] PnP rho=0.5 sigma_d=0.02: PSNR@K 5:29.41 10:30.01 20:30.50 30:30.74 40:30.84 (210s)
+12:14:22 [tune] PnP rho=0.5 sigma_d=0.03: PSNR@K 5:29.04 10:29.47 20:29.85 30:30.10 40:30.24 (223s)
+12:14:35 [tune] PnP rho=0.5 sigma_d=0.05: PSNR@K 5:28.32 10:28.54 20:28.69 30:28.77 40:28.82 (236s)
+12:14:50 [tune] PnP rho=0.5 sigma_d=0.08: PSNR@K 5:27.53 10:27.65 20:27.72 30:27.73 40:27.73 (250s)
+12:15:02 [tune] PnP rho=1.0 sigma_d=0.01: PSNR@K 5:28.84 10:29.37 20:29.84 30:30.01 40:30.03 (263s)
+12:15:15 [tune] PnP rho=1.0 sigma_d=0.02: PSNR@K 5:28.65 10:29.05 20:29.28 30:29.38 40:29.45 (276s)
+12:15:26 [tune] PnP rho=1.0 sigma_d=0.03: PSNR@K 5:28.17 10:28.38 20:28.45 30:28.51 40:28.58 (287s)
+12:15:38 [tune] PnP rho=1.0 sigma_d=0.05: PSNR@K 5:27.51 10:27.59 20:27.61 30:27.62 40:27.61 (299s)
+12:15:50 [tune] PnP rho=1.0 sigma_d=0.08: PSNR@K 5:26.61 10:26.59 20:26.56 30:26.54 40:26.52 (311s)
+12:15:50 [tune] PnP selected rho=0.1 sigma_d=0.05 K=40 val PSNR=32.47
+12:16:02 [tune] failure threshold tikhonov: PSNR < 25.18 dB
+12:16:02 [tune] failure threshold pnp_admm: PSNR < 29.70 dB
+12:16:03 [run] tikhonov sigma_assumed=0.7500: 24 obs in 0.5s, diverged=0
+12:16:03 [run] tikhonov sigma_assumed=1.1250: 24 obs in 0.3s, diverged=0
+12:16:03 [run] tikhonov sigma_assumed=1.5000: 24 obs in 0.3s, diverged=0
+12:16:04 [run] tikhonov sigma_assumed=1.8750: 24 obs in 0.4s, diverged=0
+12:16:04 [run] tikhonov sigma_assumed=2.2500: 24 obs in 0.4s, diverged=0
+12:17:17 [run] pnp_admm sigma_assumed=0.7500: 24 obs in 73.0s, diverged=0
+12:18:32 [run] pnp_admm sigma_assumed=1.1250: 24 obs in 74.8s, diverged=0
+12:19:47 [run] pnp_admm sigma_assumed=1.5000: 24 obs in 74.9s, diverged=0
+12:21:03 [run] pnp_admm sigma_assumed=1.8750: 24 obs in 76.1s, diverged=0
+12:22:16 [run] pnp_admm sigma_assumed=2.2500: 24 obs in 73.2s, diverged=0
+12:22:17 [evaluate] wrote per_image.csv (240 rows); absolute failures per method: pnp_admm=66, tikhonov=26
+12:23:20 [summarize] wrote summary tables to <repo>\results\quick
+12:23:27 [plot] 6 figures -> <repo>\results\quick\figures
+12:23:27 [reproduce] done
+12:24:02 profile=quick tag=quick device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:24:02 [data] synth-7d41daefee0a: train=400, val=12, test=12
+12:24:02 [denoiser] restored committed checkpoint results/checkpoints/den-2df14010572a_model.pt (hash verified below)
+12:24:02 [denoiser] reusing cached checkpoint den-2df14010572a
+12:24:02 [train-denoiser] done

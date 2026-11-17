@@ -1,0 +1,16 @@
+{
+  "n_test_images": 12,
+  "noise_seeds": [
+    0,
+    1
+  ],
+  "ratios": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "bootstrap_resamples": 1000,
+  "ci": 0.95
+}

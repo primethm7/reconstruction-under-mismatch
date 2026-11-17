@@ -1,0 +1,68 @@
+{
+  "run_dir": "artifacts/runs/quick/run_e7fccd2b8143",
+  "key": "e7fccd2b8143",
+  "spec": {
+    "y": "33fc4c65539cf6a106caa2183a156c875cd1646cde7770ca99d4edb7c7b0cb74",
+    "sel": {
+      "tikhonov": {
+        "lam": 0.0316228,
+        "val_psnr_mean": 27.986021806067612,
+        "on_grid_boundary": false
+      },
+      "pnp_admm": {
+        "rho": 0.1,
+        "sigma_d": 0.05,
+        "n_iter": 40,
+        "val_psnr_mean": 32.471236774122715,
+        "denoiser": {
+          "denoiser": "small_cnn",
+          "checkpoint_sha256": "dade27cb429ef05a1331f3bcc106c9d55b926c96ec6ff3bb6b5714246a5ba1a2"
+        },
+        "on_grid_boundary": {
+          "rho": false,
+          "sigma_d": false,
+          "n_iter": true
+        }
+      }
+    },
+    "sigma_assumed": [
+      0.75,
+      1.125,
+      1.5,
+      1.875,
+      2.25
+    ],
+    "truncate": 4.0,
+    "scores": {
+      "residual_eps": 1e-12,
+      "acf_max_lag": 3,
+      "sensitivity_delta": 0.05
+    },
+    "methods": [
+      "tikhonov",
+      "pnp_admm"
+    ],
+    "clip": [
+      true,
+      true
+    ],
+    "code": "c06301b1406d77fd09dab2e0be48f1862f434f62d52266a9d96cf595e89b5dc0"
+  },
+  "reconstructors": {
+    "tikhonov": {
+      "method": "tikhonov",
+      "lam": 0.0316228,
+      "clip_output": true
+    },
+    "pnp_admm": {
+      "method": "pnp_admm",
+      "rho": 0.1,
+      "sigma_d": 0.05,
+      "n_iter": 40,
+      "init": "x0 = v0 = y, u0 = 0",
+      "output": "v^K clipped to [0,1]",
+      "denoiser": "small_cnn",
+      "clip_output": true
+    }
+  }
+}

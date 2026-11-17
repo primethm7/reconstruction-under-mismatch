@@ -1,0 +1,80 @@
+{
+  "tikhonov": {
+    "matched_median": {
+      "image_id": "test-0008",
+      "image_index": 8,
+      "noise_seed": 0,
+      "ratio": 1.0,
+      "psnr": 28.641821623380523,
+      "mse": 0.0013671552598555929,
+      "rel_residual": 0.05286727100610733,
+      "residual_acf": 0.04598255455493927,
+      "sensitivity": 0.15682388842105865,
+      "failure": false
+    },
+    "mismatch_worst": {
+      "image_id": "test-0004",
+      "image_index": 4,
+      "noise_seed": 0,
+      "ratio": 0.5,
+      "psnr": 22.329769057363475,
+      "mse": 0.005848211820654443,
+      "rel_residual": 0.04440438374876976,
+      "residual_acf": 0.13061268627643585,
+      "sensitivity": 0.26981791853904724,
+      "failure": true
+    },
+    "low_residual_high_error": {
+      "image_id": "test-0004",
+      "image_index": 4,
+      "noise_seed": 0,
+      "ratio": 0.5,
+      "psnr": 22.329769057363475,
+      "mse": 0.005848211820654443,
+      "rel_residual": 0.04440438374876976,
+      "residual_acf": 0.13061268627643585,
+      "sensitivity": 0.26981791853904724,
+      "failure": true
+    },
+    "low_residual_quartile_threshold": 0.05352899432182312
+  },
+  "pnp_admm": {
+    "matched_median": {
+      "image_id": "test-0000",
+      "image_index": 0,
+      "noise_seed": 0,
+      "ratio": 1.0,
+      "psnr": 32.68435056493384,
+      "mse": 0.0005389704358816788,
+      "rel_residual": 0.0546407550573349,
+      "residual_acf": 0.024923523887991905,
+      "sensitivity": 0.2691604495048523,
+      "failure": false
+    },
+    "mismatch_worst": {
+      "image_id": "test-0004",
+      "image_index": 4,
+      "noise_seed": 0,
+      "ratio": 1.5,
+      "psnr": 19.237527587676652,
+      "mse": 0.011919203680012435,
+      "rel_residual": 0.08970865607261658,
+      "residual_acf": 0.5008606314659119,
+      "sensitivity": 1.2857728004455566,
+      "failure": true
+    },
+    "low_residual_high_error": {
+      "image_id": "test-0004",
+      "image_index": 4,
+      "noise_seed": 0,
+      "ratio": 0.5,
+      "psnr": 24.141379469867154,
+      "mse": 0.0038535593581656606,
+      "rel_residual": 0.048763226717710495,
+      "residual_acf": 0.031885843724012375,
+      "sensitivity": 0.0818467065691948,
+      "failure": true
+    },
+    "low_residual_quartile_threshold": 0.05278538167476654
+  }
+}

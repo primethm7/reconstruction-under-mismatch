@@ -1,0 +1,47 @@
+{
+  "data": {
+    "status": "done",
+    "time": "2026-11-17 12:24:02",
+    "seconds": 0.0
+  },
+  "denoiser": {
+    "status": "done",
+    "time": "2026-11-17 12:24:02",
+    "seconds": 0.3
+  },
+  "observations_val": {
+    "status": "done",
+    "time": "2026-11-17 12:10:39",
+    "seconds": 0.0
+  },
+  "tune": {
+    "status": "done",
+    "time": "2026-11-17 12:16:02",
+    "seconds": 323.2
+  },
+  "observations_test": {
+    "status": "done",
+    "time": "2026-11-17 12:16:02",
+    "seconds": 0.0
+  },
+  "run": {
+    "status": "done",
+    "time": "2026-11-17 12:22:16",
+    "seconds": 373.9
+  },
+  "evaluate": {
+    "status": "done",
+    "time": "2026-11-17 12:22:17",
+    "seconds": 1.0
+  },
+  "summarize": {
+    "status": "done",
+    "time": "2026-11-17 12:23:20",
+    "seconds": 61.7
+  },
+  "plot": {
+    "status": "done",
+    "time": "2026-11-17 12:23:27",
+    "seconds": 6.2
+  }
+}
