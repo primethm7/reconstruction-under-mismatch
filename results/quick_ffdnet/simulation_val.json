@@ -1,0 +1,25 @@
+{
+  "split": "val",
+  "sigma_true": 1.5,
+  "noise_std": 0.02,
+  "noise_seeds": [
+    0
+  ],
+  "truncate": 4.0,
+  "boundary": "circular",
+  "y_clipped": false,
+  "n_images": 12,
+  "y_sha256": "0fcf89ebafa6186b1802d858bb93a221a7994c3bb487db5b5975973a3184f7d8",
+  "spec": {
+    "data": "6dd1cccb514d4faab6c1ec15198e26ee5b222f9f7be4f6a68c1d6095be6f1058",
+    "sigma_true": 1.5,
+    "truncate": 4.0,
+    "noise": 0.02,
+    "seeds": [
+      0
+    ],
+    "master_seed": 20261117,
+    "code": "bc790e6b18bdb244faff9fbe6579624bf9aac0f5f92e7b8f6d6dfe822885226b"
+  },
+  "directory": "artifacts/runs/quick_ffdnet/obs_val_9ed6490d3649"
+}

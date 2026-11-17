@@ -1,0 +1,138 @@
+experiment: synthetic_gaussian_blur_mismatch
+master_seed: 20261117
+image_size: 128
+device: auto
+num_threads: 4
+data:
+  source: synthetic
+  n_train: 400
+  n_val: 12
+  n_test: 12
+  n_denoiser_heldout: 12
+operator:
+  boundary: circular
+  sigma_true: 1.5
+  truncate: 4.0
+  ratios:
+  - 0.5
+  - 0.75
+  - 1.0
+  - 1.25
+  - 1.5
+  sigma_assumed:
+  - 0.75
+  - 1.125
+  - 1.5
+  - 1.875
+  - 2.25
+noise:
+  std: 0.02
+  test_seeds:
+  - 0
+  - 1
+  val_seeds:
+  - 0
+methods:
+- tikhonov
+- pnp_admm
+tikhonov:
+  clip_output: true
+  lambda_grid:
+  - 0.0001
+  - 0.000133352
+  - 0.000177828
+  - 0.000237137
+  - 0.000316228
+  - 0.000421697
+  - 0.000562341
+  - 0.000749894
+  - 0.001
+  - 0.00133352
+  - 0.00177828
+  - 0.00237137
+  - 0.00316228
+  - 0.00421697
+  - 0.00562341
+  - 0.00749894
+  - 0.01
+  - 0.0133352
+  - 0.0177828
+  - 0.0237137
+  - 0.0316228
+  - 0.0421697
+  - 0.0562341
+  - 0.0749894
+  - 0.1
+  - 0.133352
+  - 0.177828
+  - 0.237137
+  - 0.316228
+  - 0.421697
+  - 0.562341
+  - 0.749894
+  - 1.0
+pnp:
+  denoiser: ffdnet_kair
+  rho_grid:
+  - 0.05
+  - 0.1
+  - 0.2
+  - 0.5
+  - 1.0
+  sigma_d_grid:
+  - 0.01
+  - 0.02
+  - 0.03
+  - 0.05
+  - 0.08
+  iters_grid:
+  - 5
+  - 10
+  - 20
+  - 30
+  - 40
+  clip_output: true
+  divergence_bound: 1000.0
+  batch_size: 72
+  denoiser_chunk: 24
+denoiser:
+  arch:
+    depth: 8
+    width: 32
+  train:
+    iterations: 4000
+    batch_size: 16
+    crop: 64
+    lr: 0.001
+    lr_min: 1.0e-05
+    sigma_range:
+    - 0.0
+    - 0.1
+    eval_every: 250
+    eval_sigmas:
+    - 0.01
+    - 0.02
+    - 0.05
+    - 0.1
+    seed: 7
+scores:
+  residual_eps: 1.0e-12
+  acf_max_lag: 3
+  sensitivity_delta: 0.05
+failure:
+  margin_db: 3.0
+  relative_worst_fraction: 0.2
+review_fractions:
+- 0.1
+- 0.2
+- 0.3
+- 0.5
+- 1.0
+bootstrap:
+  n_resamples: 1000
+  seed: 12345
+  ci: 0.95
+results_tag_suffix: _ffdnet
+profile: quick
+extra_config:
+- configs/extensions/ffdnet_kair.yaml

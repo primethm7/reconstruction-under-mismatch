@@ -1,0 +1,49 @@
+{
+  "key": "79506648a7a4",
+  "selection_metric": "mean PSNR on validation observations, matched operator (sigma_assumed = sigma_true)",
+  "validation": {
+    "n_images": 12,
+    "noise_seeds": [
+      0
+    ],
+    "n_observations": 12
+  },
+  "tikhonov": {
+    "lam": 0.0316228,
+    "val_psnr_mean": 27.986021806067612,
+    "on_grid_boundary": false
+  },
+  "pnp_admm": {
+    "rho": 0.05,
+    "sigma_d": 0.05,
+    "n_iter": 30,
+    "val_psnr_mean": 31.305310942100423,
+    "denoiser": {
+      "denoiser": "ffdnet_kair",
+      "url": "https://github.com/cszn/KAIR/releases/download/v1.0/ffdnet_gray.pth",
+      "license": "MIT (KAIR repository)",
+      "checkpoint_sha256": "3c592bc022b4ec609e5e3b03776267c6297eba2714fd3c5f5dae62c12f7ac9c3"
+    },
+    "on_grid_boundary": {
+      "rho": true,
+      "sigma_d": false,
+      "n_iter": false
+    }
+  },
+  "failure": {
+    "rule": "PSNR < median(validation matched PSNR of the same method) - 3.0 dB",
+    "margin_db": 3.0,
+    "thresholds": {
+      "tikhonov": {
+        "median_val_matched_psnr": 28.182060973569186,
+        "threshold_psnr": 25.182060973569186
+      },
+      "pnp_admm": {
+        "median_val_matched_psnr": 31.176262530485758,
+        "threshold_psnr": 28.176262530485758
+      }
+    },
+    "relative_worst_fraction": 0.2
+  },
+  "frozen_at": "2026-11-17 11:55:45"
+}
