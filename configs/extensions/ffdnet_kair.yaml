@@ -1,0 +1,5 @@
+# Extension: pretrained FFDNet (KAIR model zoo, MIT license, trained on natural images) as the
+# PnP denoiser instead of the small synthetic-data CNN. Downloads 1.95 MB on first use.
+results_tag_suffix: _ffdnet
+pnp:
+  denoiser: ffdnet_kair

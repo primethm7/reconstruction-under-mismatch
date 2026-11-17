@@ -1,0 +1,12 @@
+# Extension: public biomedical images (OrganCMNIST 128x128, CC BY 4.0) with SIMULATED blur + noise.
+# Opt-in: downloads 287.5 MB from Zenodo on first use (md5-verified).
+# The PnP denoiser is the synthetic-data model (no training on these images) -> domain shift.
+# Hyper-parameters and failure thresholds are re-selected on OrganCMNIST validation slices.
+results_tag: medmnist_organc
+data:
+  source: medmnist
+  dataset: organcmnist_128
+  n_train: 0
+  n_val: 24
+  n_test: 48
+denoiser_training_data: {n_train: 400, n_val: 24, n_test: 48, n_denoiser_heldout: 12}
