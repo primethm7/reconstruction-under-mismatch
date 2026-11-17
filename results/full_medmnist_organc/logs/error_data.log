@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<repo>\src\reconstruction_mismatch\experiments\pipeline.py", line 143, in run_stage
+    out = fn(ctx, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\experiments\pipeline.py", line 168, in stage_data
+    ddir, manifest = build_medmnist_dataset(ctx.cfg["data"], ctx.cfg["master_seed"], ctx.artifacts, ctx.log)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\data\medmnist.py", line 75, in build_medmnist_dataset
+    raw = download(name, Path(artifacts) / "external" / "medmnist", log=log)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\data\medmnist.py", line 53, in download
+    log(f"[medmnist] downloading {info['url']} ({info['size_mb']} MB) -> {path}")
+TypeError: 'Logger' object is not callable

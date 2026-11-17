@@ -1,0 +1,29 @@
+{
+  "split": "test",
+  "sigma_true": 1.5,
+  "noise_std": 0.02,
+  "noise_seeds": [
+    0,
+    1,
+    2
+  ],
+  "truncate": 4.0,
+  "boundary": "circular",
+  "y_clipped": false,
+  "n_images": 48,
+  "y_sha256": "ba808a4c42d18a2f25677a15efade091e5664301ad1480d0eb7f09afac58669e",
+  "spec": {
+    "data": "a809f30c541c22ea7fde8d243ead59c06f27d003223c1cdb12a8ed72370b5388",
+    "sigma_true": 1.5,
+    "truncate": 4.0,
+    "noise": 0.02,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "master_seed": 20261117,
+    "code": "bc790e6b18bdb244faff9fbe6579624bf9aac0f5f92e7b8f6d6dfe822885226b"
+  },
+  "directory": "artifacts/runs/full_medmnist_organc/obs_test_87e042adbfdf"
+}

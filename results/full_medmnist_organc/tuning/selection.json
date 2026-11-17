@@ -1,0 +1,47 @@
+{
+  "key": "6ea13d831a3c",
+  "selection_metric": "mean PSNR on validation observations, matched operator (sigma_assumed = sigma_true)",
+  "validation": {
+    "n_images": 24,
+    "noise_seeds": [
+      0
+    ],
+    "n_observations": 24
+  },
+  "tikhonov": {
+    "lam": 0.0237137,
+    "val_psnr_mean": 27.621101750128144,
+    "on_grid_boundary": false
+  },
+  "pnp_admm": {
+    "rho": 0.05,
+    "sigma_d": 0.08,
+    "n_iter": 5,
+    "val_psnr_mean": 29.90554301905401,
+    "denoiser": {
+      "denoiser": "small_cnn",
+      "checkpoint_sha256": "dade27cb429ef05a1331f3bcc106c9d55b926c96ec6ff3bb6b5714246a5ba1a2"
+    },
+    "on_grid_boundary": {
+      "rho": true,
+      "sigma_d": true,
+      "n_iter": true
+    }
+  },
+  "failure": {
+    "rule": "PSNR < median(validation matched PSNR of the same method) - 3.0 dB",
+    "margin_db": 3.0,
+    "thresholds": {
+      "tikhonov": {
+        "median_val_matched_psnr": 27.614369905464045,
+        "threshold_psnr": 24.614369905464045
+      },
+      "pnp_admm": {
+        "median_val_matched_psnr": 29.504455346846672,
+        "threshold_psnr": 26.504455346846672
+      }
+    },
+    "relative_worst_fraction": 0.2
+  },
+  "frozen_at": "2026-11-17 11:37:48"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "medmnist-4a1a2f36a89c",
+  "spec": {
+    "source": "medmnist",
+    "dataset": "organcmnist_128",
+    "md5": "773c1f009daa3fe5d9a2a201b2a7ed94",
+    "seed": 20261117,
+    "n_val": 24,
+    "n_test": 48
+  },
+  "splits": {
+    "val": {
+      "n": 24,
+      "sha256": "02fda60eee963a32b7c4ebc7c3702f8d77a3a69fdf13cea2fd23e79d60cf6046"
+    },
+    "test": {
+      "n": 48,
+      "sha256": "a809f30c541c22ea7fde8d243ead59c06f27d003223c1cdb12a8ed72370b5388"
+    },
+    "train": {
+      "n": 0,
+      "sha256": "8c48c893ceaf97ec63fd558cb3cef7063c40a8ba54ef26e76d9c960f2fe91b58"
+    }
+  },
+  "directory": "artifacts/data/medmnist-4a1a2f36a89c",
+  "source_info": {
+    "url": "https://zenodo.org/records/10519652/files/organcmnist_128.npz?download=1",
+    "md5": "773c1f009daa3fe5d9a2a201b2a7ed94",
+    "size_mb": 287.5,
+    "record": "https://zenodo.org/records/10519652",
+    "doi": "10.5281/zenodo.10519652",
+    "version": "MedMNIST+ v3.0 (Zenodo, 2024-01-16)",
+    "license": "CC BY 4.0",
+    "citation": "Yang et al., MedMNIST v2, Scientific Data 10, 41 (2023); Bilic et al., LiTS, Medical Image Analysis 84 (2023); Xu et al., IEEE TMI 38(8) (2019)",
+    "split_unit": "CT scan (official: 115/16/70 scans for train/val/test); per-slice scan IDs not released",
+    "modality": "abdominal CT, coronal 2-D crops, abdominal window, uint8",
+    "file_md5_verified": true
+  }
+}
