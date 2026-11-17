@@ -1,0 +1,29 @@
+{
+  "split": "test",
+  "sigma_true": 1.5,
+  "noise_std": 0.02,
+  "noise_seeds": [
+    0,
+    1,
+    2
+  ],
+  "truncate": 4.0,
+  "boundary": "circular",
+  "y_clipped": false,
+  "n_images": 48,
+  "y_sha256": "2c9502900f276909a987964e5c5a0f6a63e576c778463405b0e9e61382018576",
+  "spec": {
+    "data": "71a70925306543448ee812343ecf2fa71853007e3de02ed16a2e8f31d6b8770f",
+    "sigma_true": 1.5,
+    "truncate": 4.0,
+    "noise": 0.02,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "master_seed": 20261117,
+    "code": "bc790e6b18bdb244faff9fbe6579624bf9aac0f5f92e7b8f6d6dfe822885226b"
+  },
+  "directory": "artifacts/runs/full/obs_test_eee86a9780c1"
+}

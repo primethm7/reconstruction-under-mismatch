@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "<repo>\src\reconstruction_mismatch\experiments\pipeline.py", line 143, in run_stage
+    out = fn(ctx, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\cli.py", line 78, in <lambda>
+    P.run_stage(ctx, "report", lambda c: build_all(c.root, log=c.info))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\reporting\report.py", line 316, in build_all
+    out = build_report(root, log=log)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\reporting\report.py", line 305, in build_report
+    filled = PAT.sub(sub, text)
+             ^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\reporting\report.py", line 295, in sub
+    return _table(results, arg)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\reporting\report.py", line 221, in _table
+    return TABLES[name](results)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\reporting\report.py", line 204, in <lambda>
+    "runtime": lambda R: table_runtime(R),
+                         ^^^^^^^^^^^^^^^^
+  File "<repo>\src\reconstruction_mismatch\reporting\report.py", line 115, in table_runtime
+    "diverged / non-finite": f"{int(r.div)} / {int(r.nonfin)} of {int(r.n)}"} for _, r in g.iterrows()]
+                                ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'method'

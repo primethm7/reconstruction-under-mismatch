@@ -1,0 +1,25 @@
+{
+  "split": "val",
+  "sigma_true": 1.5,
+  "noise_std": 0.02,
+  "noise_seeds": [
+    0
+  ],
+  "truncate": 4.0,
+  "boundary": "circular",
+  "y_clipped": false,
+  "n_images": 24,
+  "y_sha256": "1a6b0ec29e45bfa15ae1e3c61489f4b4756a93338af861dd0b8a9d06ba6b7b41",
+  "spec": {
+    "data": "e0bd3f0af3e8ca36dfd42d21e07d4ff4d08071b9de5bedb1801cb3d99ab1d7a6",
+    "sigma_true": 1.5,
+    "truncate": 4.0,
+    "noise": 0.02,
+    "seeds": [
+      0
+    ],
+    "master_seed": 20261117,
+    "code": "bc790e6b18bdb244faff9fbe6579624bf9aac0f5f92e7b8f6d6dfe822885226b"
+  },
+  "directory": "artifacts/runs/full/obs_val_e4271ec4bb77"
+}

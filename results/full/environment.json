@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-11-17T03:24:26+00:00",
+  "package_version": "0.1.0",
+  "python": "3.12.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+  "torch_num_threads": 4,
+  "packages": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "scikit-image": "0.26.0",
+    "matplotlib": "3.11.2",
+    "pandas": "3.1.1",
+    "PyYAML": "6.0.3",
+    "torch": "2.15.0+cpu",
+    "markdown": "3.11.3"
+  },
+  "device": {
+    "requested": "auto",
+    "checks": {
+      "cuda": "torch.cuda.is_available() is False",
+      "mps": "torch.backends.mps.is_available() is False",
+      "cpu": "ok (cpu)"
+    },
+    "selected": "cpu"
+  },
+  "git": {
+    "commit": null,
+    "dirty": null,
+    "error": "CalledProcessError(128, ['git', 'rev-parse', 'HEAD'])"
+  },
+  "code_sha256_all": "878e9a07c76adb676f9115e8393659df983ce3d417c3b7b2ec6556615d023982",
+  "code_sha256_compute": "a60cb3b1c29ab39368791f99b6e28c769e81c4ffe6d10a925acc67a62b008bd3"
+}

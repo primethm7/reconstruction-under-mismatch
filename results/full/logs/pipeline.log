@@ -1,0 +1,122 @@
+09:41:20 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+09:41:42 [data] synth-ac26c76cb585: train=400, val=24, test=48
+09:41:42 [denoiser] training den-2df14010572a on 400 synthetic train phantoms (cpu)
+09:41:47 [denoiser] random-init held-out: [{'sigma': 0.01, 'psnr_noisy': 39.998646293231126, 'psnr_denoised': 23.330346082177854, 'gain_db': -16.66830021105327}, {'sigma': 0.02, 'psnr_noisy': 33.95883288375153, 'psnr_denoised': 23.04597048343049, 'gain_db': -10.912862400321043}, {'sigma': 0.05, 'psnr_noisy': 26.05054036441499, 'psnr_denoised': 21.520657089627903, 'gain_db': -4.529883274787085}, {'sigma': 0.1, 'psnr_noisy': 19.996670769660692, 'psnr_denoised': 18.367039598493736, 'gain_db': -1.629631171166956}]
+09:44:06 [denoiser] it 250/4000 loss 2.36e-03 lr 9.9e-04 held-out gains s=0.01:+3.46dB, s=0.02:+6.00dB, s=0.05:+8.38dB, s=0.10:+9.69dB (139s)
+09:46:52 [denoiser] it 500/4000 loss 4.96e-04 lr 9.6e-04 held-out gains s=0.01:+5.06dB, s=0.02:+7.39dB, s=0.05:+9.63dB, s=0.10:+10.92dB (304s)
+09:49:13 [denoiser] it 750/4000 loss 4.34e-04 lr 9.2e-04 held-out gains s=0.01:+5.39dB, s=0.02:+7.75dB, s=0.05:+9.98dB, s=0.10:+11.26dB (446s)
+09:51:48 [denoiser] it 1000/4000 loss 4.07e-04 lr 8.6e-04 held-out gains s=0.01:+5.24dB, s=0.02:+7.65dB, s=0.05:+10.07dB, s=0.10:+11.35dB (600s)
+09:54:05 [denoiser] it 1250/4000 loss 3.94e-04 lr 7.8e-04 held-out gains s=0.01:+6.00dB, s=0.02:+8.12dB, s=0.05:+10.37dB, s=0.10:+11.61dB (738s)
+09:56:43 [denoiser] it 1500/4000 loss 3.78e-04 lr 6.9e-04 held-out gains s=0.01:+6.19dB, s=0.02:+8.25dB, s=0.05:+10.46dB, s=0.10:+11.66dB (895s)
+09:59:06 [denoiser] it 1750/4000 loss 3.70e-04 lr 6.0e-04 held-out gains s=0.01:+6.23dB, s=0.02:+8.41dB, s=0.05:+10.63dB, s=0.10:+11.83dB (1039s)
+10:01:16 [denoiser] it 2000/4000 loss 3.60e-04 lr 5.1e-04 held-out gains s=0.01:+6.44dB, s=0.02:+8.48dB, s=0.05:+10.71dB, s=0.10:+11.91dB (1169s)
+10:03:26 [denoiser] it 2250/4000 loss 3.53e-04 lr 4.1e-04 held-out gains s=0.01:+6.53dB, s=0.02:+8.60dB, s=0.05:+10.81dB, s=0.10:+12.01dB (1299s)
+10:05:37 [denoiser] it 2500/4000 loss 3.51e-04 lr 3.2e-04 held-out gains s=0.01:+6.60dB, s=0.02:+8.64dB, s=0.05:+10.85dB, s=0.10:+12.04dB (1429s)
+10:07:42 [denoiser] it 2750/4000 loss 3.50e-04 lr 2.3e-04 held-out gains s=0.01:+6.55dB, s=0.02:+8.64dB, s=0.05:+10.87dB, s=0.10:+12.05dB (1554s)
+10:09:48 [denoiser] it 3000/4000 loss 3.47e-04 lr 1.6e-04 held-out gains s=0.01:+6.65dB, s=0.02:+8.71dB, s=0.05:+10.91dB, s=0.10:+12.11dB (1681s)
+10:11:56 [denoiser] it 3250/4000 loss 3.36e-04 lr 9.3e-05 held-out gains s=0.01:+6.68dB, s=0.02:+8.75dB, s=0.05:+10.96dB, s=0.10:+12.14dB (1808s)
+10:14:00 [denoiser] it 3500/4000 loss 3.41e-04 lr 4.8e-05 held-out gains s=0.01:+6.68dB, s=0.02:+8.75dB, s=0.05:+10.96dB, s=0.10:+12.14dB (1933s)
+10:16:28 [denoiser] it 3750/4000 loss 3.46e-04 lr 2.0e-05 held-out gains s=0.01:+6.72dB, s=0.02:+8.77dB, s=0.05:+10.98dB, s=0.10:+12.17dB (2081s)
+10:18:30 [denoiser] it 4000/4000 loss 3.37e-04 lr 1.0e-05 held-out gains s=0.01:+6.72dB, s=0.02:+8.78dB, s=0.05:+10.98dB, s=0.10:+12.16dB (2202s)
+10:18:30 [train-denoiser] done
+10:34:01 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+10:34:01 [data] synth-ac26c76cb585: train=400, val=24, test=48
+10:34:02 [denoiser] reusing cached checkpoint den-2df14010572a
+10:34:02 [observations] val: 24 observations (24 images x 1 noise seeds)
+10:34:03 [tune] Tikhonov lambda=0.0316 val PSNR=28.27
+10:34:30 [tune] PnP rho=0.05 sigma_d=0.01: PSNR@K 5:26.59 10:24.50 20:21.83 30:20.00 40:18.56 (27s)
+10:34:58 [tune] PnP rho=0.05 sigma_d=0.02: PSNR@K 5:29.01 10:28.07 20:26.79 30:25.84 40:25.05 (55s)
+10:35:25 [tune] PnP rho=0.05 sigma_d=0.03: PSNR@K 5:30.61 10:30.57 20:30.45 30:30.31 40:30.19 (82s)
+10:35:49 [tune] PnP rho=0.05 sigma_d=0.05: PSNR@K 5:31.77 10:32.23 20:32.50 30:32.54 40:32.54 (107s)
+10:36:14 [tune] PnP rho=0.05 sigma_d=0.08: PSNR@K 5:31.83 10:32.30 20:32.47 30:32.49 40:32.49 (132s)
+10:36:37 [tune] PnP rho=0.1 sigma_d=0.01: PSNR@K 5:28.88 10:27.89 20:26.17 30:24.75 40:23.52 (155s)
+10:37:01 [tune] PnP rho=0.1 sigma_d=0.02: PSNR@K 5:30.77 10:31.00 20:31.04 30:30.94 40:30.79 (178s)
+10:37:26 [tune] PnP rho=0.1 sigma_d=0.03: PSNR@K 5:31.35 10:31.94 20:32.40 30:32.52 40:32.51 (204s)
+10:37:50 [tune] PnP rho=0.1 sigma_d=0.05: PSNR@K 5:31.36 10:32.08 20:32.58 30:32.73 40:32.77 (227s)
+10:38:15 [tune] PnP rho=0.1 sigma_d=0.08: PSNR@K 5:30.58 10:31.11 20:31.37 30:31.42 40:31.44 (252s)
+10:38:40 [tune] PnP rho=0.2 sigma_d=0.01: PSNR@K 5:30.02 10:30.16 20:29.85 30:29.37 40:28.86 (278s)
+10:39:05 [tune] PnP rho=0.2 sigma_d=0.02: PSNR@K 5:30.75 10:31.39 20:31.90 30:32.08 40:32.11 (302s)
+10:39:30 [tune] PnP rho=0.2 sigma_d=0.03: PSNR@K 5:30.77 10:31.47 20:32.12 30:32.37 40:32.45 (327s)
+10:39:54 [tune] PnP rho=0.2 sigma_d=0.05: PSNR@K 5:30.16 10:30.72 20:31.19 30:31.35 40:31.42 (351s)
+10:40:17 [tune] PnP rho=0.2 sigma_d=0.08: PSNR@K 5:29.36 10:29.68 20:29.88 30:29.94 40:29.96 (374s)
+10:40:43 [tune] PnP rho=0.5 sigma_d=0.01: PSNR@K 5:29.84 10:30.39 20:30.80 30:30.89 40:30.83 (401s)
+10:41:09 [tune] PnP rho=0.5 sigma_d=0.02: PSNR@K 5:29.82 10:30.36 20:30.86 30:31.14 40:31.27 (427s)
+10:41:34 [tune] PnP rho=0.5 sigma_d=0.03: PSNR@K 5:29.48 10:29.90 20:30.30 30:30.54 40:30.67 (452s)
+10:41:59 [tune] PnP rho=0.5 sigma_d=0.05: PSNR@K 5:28.87 10:29.13 20:29.35 30:29.45 40:29.49 (476s)
+10:42:24 [tune] PnP rho=0.5 sigma_d=0.08: PSNR@K 5:28.03 10:28.18 20:28.29 30:28.30 40:28.31 (502s)
+10:42:51 [tune] PnP rho=1.0 sigma_d=0.01: PSNR@K 5:29.31 10:29.79 20:30.20 30:30.35 40:30.37 (528s)
+10:43:18 [tune] PnP rho=1.0 sigma_d=0.02: PSNR@K 5:29.06 10:29.42 20:29.69 30:29.84 40:29.94 (555s)
+10:43:42 [tune] PnP rho=1.0 sigma_d=0.03: PSNR@K 5:28.68 10:28.92 20:29.07 30:29.17 40:29.24 (579s)
+10:44:06 [tune] PnP rho=1.0 sigma_d=0.05: PSNR@K 5:28.04 10:28.15 20:28.22 30:28.25 40:28.26 (603s)
+10:44:29 [tune] PnP rho=1.0 sigma_d=0.08: PSNR@K 5:27.03 10:27.02 20:27.00 30:26.99 40:26.98 (627s)
+10:44:29 [tune] PnP selected rho=0.1 sigma_d=0.05 K=40 val PSNR=32.77
+10:44:54 [tune] failure threshold tikhonov: PSNR < 25.35 dB
+10:44:54 [tune] failure threshold pnp_admm: PSNR < 30.03 dB
+10:44:55 [observations] test: 144 observations (48 images x 3 noise seeds)
+10:44:57 [run] tikhonov sigma_assumed=0.7500: 144 obs in 1.8s, diverged=0
+10:44:59 [run] tikhonov sigma_assumed=1.1250: 144 obs in 1.9s, diverged=0
+10:45:01 [run] tikhonov sigma_assumed=1.5000: 144 obs in 2.0s, diverged=0
+10:45:03 [run] tikhonov sigma_assumed=1.8750: 144 obs in 2.4s, diverged=0
+10:45:05 [run] tikhonov sigma_assumed=2.2500: 144 obs in 1.9s, diverged=0
+10:52:51 [run] pnp_admm sigma_assumed=0.7500: 144 obs in 465.5s, diverged=0
+11:00:18 [run] pnp_admm sigma_assumed=1.1250: 144 obs in 447.8s, diverged=0
+11:07:40 [run] pnp_admm sigma_assumed=1.5000: 144 obs in 442.0s, diverged=0
+11:15:13 [run] pnp_admm sigma_assumed=1.8750: 144 obs in 452.6s, diverged=0
+11:22:38 [run] pnp_admm sigma_assumed=2.2500: 144 obs in 445.3s, diverged=0
+11:22:43 [evaluate] wrote per_image.csv (1440 rows); absolute failures per method: pnp_admm=388, tikhonov=119
+11:25:25 [summarize] wrote summary tables to <repo>\results\full
+11:25:33 [plot] 6 figures -> <repo>\results\full\figures
+11:25:33 [reproduce] done
+11:27:32 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:27:49 [plot] 6 figures -> <repo>\results\full\figures
+11:27:49 [plot] done
+11:29:00 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:29:16 [plot] 6 figures -> <repo>\results\full\figures
+11:29:16 [plot] done
+11:30:29 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+11:36:49 [summarize] wrote summary tables to <repo>\results\full
+11:36:49 [summarize] done
+12:05:21 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:05:21 [report] FAILED: TypeError("int() argument must be a string, a bytes-like object or a real number, not 'method'")
+12:05:42 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:05:49 [report] PDF written with msedge.exe
+12:05:49 [report] <repo>\reports\report.md (3806 words)
+12:05:49 [report] <repo>\README.md (849 words)
+12:05:49 [report] <repo>\CV_BULLETS.md (275 words)
+12:05:49 [report] <repo>\UNDERSTANDING_GUIDE.md (1593 words)
+12:05:49 [report] done
+12:06:41 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:06:48 [report] PDF written with msedge.exe
+12:06:48 [report] <repo>\reports\report.md (3806 words)
+12:06:48 [report] <repo>\README.md (849 words)
+12:06:48 [report] <repo>\CV_BULLETS.md (275 words)
+12:06:48 [report] <repo>\UNDERSTANDING_GUIDE.md (1593 words)
+12:06:48 [report] done
+12:07:22 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:07:28 [report] PDF written with msedge.exe
+12:07:28 [report] <repo>\reports\report.md (3448 words)
+12:07:28 [report] <repo>\README.md (849 words)
+12:07:28 [report] <repo>\CV_BULLETS.md (275 words)
+12:07:28 [report] <repo>\UNDERSTANDING_GUIDE.md (1593 words)
+12:07:28 [report] done
+12:08:35 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:08:43 [report] PDF written with msedge.exe
+12:08:43 [report] <repo>\reports\report.md (3451 words)
+12:08:43 [report] <repo>\README.md (849 words)
+12:08:43 [report] <repo>\CV_BULLETS.md (275 words)
+12:08:43 [report] <repo>\UNDERSTANDING_GUIDE.md (1593 words)
+12:08:43 [report] done
+12:09:56 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:10:02 [report] PDF written with msedge.exe
+12:10:02 [report] <repo>\reports\report.md (3465 words)
+12:10:02 [report] <repo>\README.md (853 words)
+12:10:02 [report] <repo>\CV_BULLETS.md (279 words)
+12:10:02 [report] <repo>\UNDERSTANDING_GUIDE.md (1593 words)
+12:10:02 [report] done
+12:24:26 profile=full tag=full device=cpu ({'cuda': 'torch.cuda.is_available() is False', 'mps': 'torch.backends.mps.is_available() is False', 'cpu': 'ok (cpu)'})
+12:24:33 [report] PDF written with msedge.exe
+12:24:33 [report] <repo>\reports\report.md (3477 words)
+12:24:33 [report] <repo>\README.md (895 words)
+12:24:33 [report] <repo>\CV_BULLETS.md (279 words)
+12:24:33 [report] <repo>\UNDERSTANDING_GUIDE.md (1593 words)
+12:24:33 [report] done
