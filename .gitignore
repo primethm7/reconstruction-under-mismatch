@@ -1,0 +1,12 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+# large / regenerable artefacts (data, caches, downloaded weights, reconstructions)
+artifacts/
+*.part
+*.tmp
+# local scratch
+.ipynb_checkpoints/
